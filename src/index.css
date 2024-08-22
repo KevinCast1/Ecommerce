@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon-carrito{
+  position: relative;
+}
+.icon-carrito img{
+  width: 100%;
+  max-width: 50px;
+}
+.icon-carrito span {
+  color: black;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #0688fd;
+  border-radius: 100px;
+  width: 25px;
+  text-align: center;
+}
