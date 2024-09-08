@@ -10,12 +10,13 @@
   max-width: 50px;
 }
 .icon-carrito span {
-  color: black;
+  color: #ffffff;
   position: absolute;
   top: -5px;
   right: -5px;
-  background: #0688fd;
+  background: #e683ff;
   border-radius: 100px;
   width: 25px;
   text-align: center;
+  font-size: small;
 }

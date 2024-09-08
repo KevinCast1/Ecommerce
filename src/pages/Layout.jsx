@@ -5,14 +5,18 @@ function Layout(){
     return(
         <div>
             <header>
-                <h1>Kevin Web</h1>
+                <NavBar/>
             </header>
-            <NavBar/>
-            <Outlet/>
-            <footer>
-                <p>
-                    Powered by Kevin
-                </p>
+
+            <div className="container mx-auto py-8">
+                <Outlet/>
+            </div>
+        
+
+            <footer className=" bg-rose-900 py-8 text-white">
+                <div className="container mx-auto">
+                    Powered by Kevin Castillo - Curso React
+                </div>
             </footer>
         </div>
     )

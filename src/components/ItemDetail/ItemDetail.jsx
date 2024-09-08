@@ -1,31 +1,24 @@
-import {Link, useParams} from "react-router-dom";
-// utilizamos useParams para obtener los datos que enviamos por el dom
-import productos from "../data.js"
+import './ItemDetail.css'
 
-function ItemDetail(){
-
-   const {productoId} = useParams();
-
-//    Utilizamos find para buscar en un arreglo un elemento en este caso buscamos segunel id dentro del arreglo comparando si llega por productoId el cual es recibido desde el dom y comparado con el resutlado de find
-   const resultadoFind = productos.find((producto) => producto.id == productoId );
-
-    const {image, title, price} = resultadoFind; 
-
-    
-
+const ItemDetail = ({id, name, img, category, description, price, stock }) => {
     return (
-        <>
+        <div className="box-product-detail">
+
+            <div className='img-product-detail' style={{ backgroundImage: `url(${img})` }}>
+                
+            </div>
+            <div className='text-center'>
+                <h3>{name}</h3>
+                <p className='uppercase py-4'>{category}</p>
+            </div>            
             <div>
-                <h2>Pagina detalle producto: {productoId}</h2>
-                <Link to="/productos">Volver</Link>
+                <p>{description}</p>
             </div>
             <div>
-                <img src={image} alt="" />
-                <h2>{title}</h2>
-                <h3>{price}</h3>
-            </div>        
-        </>
-
+            <p>Costo: ${price}</p>
+                <p>Stock en tienda: {stock}</p>
+            </div>
+        </div>
     )
 }
 

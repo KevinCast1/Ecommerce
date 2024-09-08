@@ -4,7 +4,7 @@ const products = [
             "name": "Ramo de Rosas - 5 unidades",
             "price": 7500,
             "category": "rosas",
-            "img": "https://plus.unsplash.com/premium_photo-1703806517546-581595edd4e4",
+            "img": "https://www.floreriauniversal.cl/wp-content/uploads/2019/04/ENAMORADOS08-600x600-600x600.jpg",
             "stock": "10",
             "description": "Ramo de Rosas color rosa pálido, se incluyen 5 unidades por ramo."
         },
@@ -13,7 +13,7 @@ const products = [
             "name": "Ramo de Tulipanes - 10 unidades",
             "price": 8500,
             "category": "tulipanes",
-            "img": "https://plus.unsplash.com/premium_photo-1703806517546-581595edd4e4",
+            "img": "https://images.unsplash.com/photo-1476293889456-abfb7492a29f",
             "stock": "15",
             "description": "Hermoso ramo de tulipanes de colores variados. Se incluyen 10 unidades."
         },
@@ -22,7 +22,7 @@ const products = [
             "name": "Ramo de Girasoles - 3 unidades",
             "price": 6000,
             "category": "girasoles",
-            "img": "https://plus.unsplash.com/premium_photo-1703806517546-581595edd4e4",
+            "img": "https://florespicasso.cl/wp-content/uploads/2018/11/Florero-de-Girasoles.jpg",
             "stock": "8",
             "description": "Ramo de 3 girasoles brillantes, perfecto para iluminar cualquier espacio."
         },
@@ -40,7 +40,7 @@ const products = [
             "name": "Ramo de Tulipanes Blancos - 8 unidades",
             "price": 9500,
             "category": "tulipanes",
-            "img": "https://plus.unsplash.com/premium_photo-1703806517546-581595edd4e4",
+            "img": "https://images.unsplash.com/photo-1476293889456-abfb7492a29f",
             "stock": "12",
             "description": "Ramo de 8 tulipanes blancos, elegantes y frescos."
         },
@@ -67,7 +67,7 @@ const products = [
             "name": "Ramo de Tulipanes Amarillos - 6 unidades",
             "price": 7000,
             "category": "tulipanes",
-            "img": "https://plus.unsplash.com/premium_photo-1703806517546-581595edd4e4",
+            "img": "https://www.floreriauniversal.cl/wp-content/uploads/2019/05/tulipanes-amarillos2-28.000.jpg",
             "stock": "20",
             "description": "Tulipanes amarillos que destacan por su frescura. Incluye 6 unidades."
         },
@@ -98,3 +98,20 @@ export const getProducts = () => {
         }, 500)
     })
 }
+
+export const getProductById = (productID) =>{
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === productID)) // find devuelve solo 1 producto con el id asignado
+        })
+    })
+}
+
+export const getProductsByCategory = (productIDCategory) =>{
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.category === productIDCategory))  // filter devuelve todos los productos con esa categoria
+        }, 500)
+    })
+}
+

@@ -1,0 +1,7 @@
+.box-product .img-product{
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
