@@ -1,0 +1,17 @@
+.cart-img{
+    width: 100%;
+    max-width: 25px;
+}
+.cart {
+    display: flex;
+    align-items: center;
+}
+.cart span{
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    margin-left: 5px;
+}
+a{
+    text-decoration: none !important;
+}

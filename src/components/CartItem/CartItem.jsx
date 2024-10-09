@@ -1,9 +1,4 @@
-import './Item.css';
-import { Link } from 'react-router-dom';
-
-// ====== Aqui se crea el formato del componente que se listara en el ItemList.jsx ====== //
-
-const Item = ({id, name, img, price, stock}) => {
+const CartItem = ({id, name, img, price, stock}) => {
     return (
         <article className='box-product'>
             <div className='img-product' style={{ backgroundImage: `url(${img})` }}>
@@ -17,10 +12,10 @@ const Item = ({id, name, img, price, stock}) => {
                 <p>Stock: {stock}</p>
             </div>
             <div>
-                <Link className='btn btn-primary' to={`/item/${id}`}>Mas Info</Link>
+                <Link className='hover:bg-sky-700 px-4 py-2 font-bold text-sm bg-cyan-500 text-white rounded-full shadow-sm' to={`/item/${id}`}>Mas Info</Link>
             </div>
         </article>
     )
 }
 
-export default Item;
+export default CartItem;

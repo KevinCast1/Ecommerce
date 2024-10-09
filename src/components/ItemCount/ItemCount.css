@@ -1,0 +1,9 @@
+.controls{
+    margin: 25px 0;
+}
+.controls button, .controls h4{
+    display: inline-block;
+}
+.controls h4{
+    margin: 0 25px;
+}
